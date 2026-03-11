@@ -1,12 +1,3 @@
-/**
- * ============================================
- * PORTFOLIO DATA — Edit your content here!
- * ============================================
- * 
- * All text, links, projects, and skills are
- * defined in this single file for easy editing.
- */
-
 export const personalInfo = {
   name: "Mohammad Zaid Khan",
   title: "Creative Developer",
