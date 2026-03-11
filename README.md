@@ -1,1 +1,1 @@
-# Hello and welcome to my Persomnalized Portfolio
+# Hello and welcome to my Personalized Portfolio
