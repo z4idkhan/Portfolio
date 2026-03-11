@@ -33,7 +33,7 @@ const NebulaDashboard = () => {
             href="https://drive.google.com/file/d/1A_vXRsv5wKT4OSJqyXWvXG_MU6VkzK9C/view?usp=drivesdk"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.4)] hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)] hover:scale-105 transition-all duration-300"
           >
-          📘 Headless CMS API – Frontend Connectivity Guide (Click Here)
+          Headless CMS API – Frontend Connectivity Guide (Click Here)
           </a>
 
           </p>
