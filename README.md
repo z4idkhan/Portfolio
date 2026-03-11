@@ -1,1 +1,1 @@
-# Hello and welcome to my Persomnalized Portfolio Project
+# Hello and welcome to my Persomnalized Portfolio
