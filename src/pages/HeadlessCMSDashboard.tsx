@@ -1,6 +1,3 @@
-/**
- * NEBULA DASHBOARD PAGE — Guide with lorem ipsum and "Get the API" link
- */
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
