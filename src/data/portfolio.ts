@@ -16,7 +16,7 @@ export const personalInfo = {
 export const projects = [
   {
     id: 1,
-    title: "Head-Less CMS",
+    title: "Headless CMS",
     description: "Built and deployed a Headless CMS using Spring Boot and PostgreSQL, exposing secured REST APIs with a draft–publish workflow. Implemented JWT authentication for secure access, enabling frontend-agnostic JSON integration.",
     tags: ["Java", "SpringBoot", "Spring Security", "Spring6"],
     color: "#d61c1c",
