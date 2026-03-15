@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const HeadlessCmsApi = () => {
   const [copied, setCopied] = useState(false);
-  const theurl = "https://headless-cms-nxws.onrender.com";
+  const theurl = "https://headless-cms-e1lg.onrender.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(theurl);
