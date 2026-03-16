@@ -34,7 +34,7 @@ const HeadlessCmsApi = () => {
           </h1>
 
           <div className="glass-card rounded-xl p-6">
-            <p className="text-sm text-muted-foreground mb-3 font-mono">API Endpoint</p>
+            <p className="text-sm text-muted-foreground mb-3 font-mono">API Endpoint (It Might Take 1 minute to reload as It has been deployend on Render on Free version)</p>
             <div className="flex items-center gap-3 bg-muted/50 rounded-lg p-4">
               <code className="text-sm text-primary break-all flex-1 font-mono">
                 {theurl}
