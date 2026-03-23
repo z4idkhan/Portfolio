@@ -51,7 +51,7 @@ export const projects = [
     title: "Aerospace-telemetry-anomaly-detection",
     description: "Demonstrate how Machine Learning can enhance aerospace mission safety by predicting component failure before it occurs, reducing downtime and preventing catastrophic failures.",
     tags: ["Python", "AI", "Machine Learning","Aerospace"],
-    color: "#22d142",
+    color: "#d17122",
     link: "https://github.com/z4idkhan/aerospace-telemetry-anomaly-detection",
   },
   
