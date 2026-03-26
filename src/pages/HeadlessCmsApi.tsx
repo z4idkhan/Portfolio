@@ -21,7 +21,7 @@ const HeadlessCmsApi = () => {
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-12"
         >
           <ArrowLeft size={16} />
-          Back to Guide
+          Back
         </Link>
 
         <motion.div
