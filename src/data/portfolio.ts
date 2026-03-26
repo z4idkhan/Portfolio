@@ -44,7 +44,7 @@ export const projects = [
     description: "An AI-powered note-taking app with beautiful markdown editing and mind maps.",
     tags: ["TypeScript", "AI", "Canvas"],
     color: "#22d142",
-    link: "#",
+    link: "https://expense-tracker-orcin-zeta-40.vercel.app/",
   },
 {
     id: 5,
