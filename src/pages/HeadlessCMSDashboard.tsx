@@ -20,7 +20,7 @@ const NebulaDashboard = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-foreground">
-            Guide for How to Use
+            Headless CMS
           </h1>
 
           <div className="prose prose-invert max-w-none">
