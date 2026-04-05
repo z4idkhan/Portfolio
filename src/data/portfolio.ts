@@ -71,7 +71,7 @@ export const skills = [
   { name: "Python", level: 80 },
   { name: "C++", level: 85 },
   { name: "React", level: 70 },
-  { name: "UI/UX Design", level: 40 },
+  { name: "Machine Learning", level: 75 },
 ];
 
 /** Navigation sections — order matters for scroll */
