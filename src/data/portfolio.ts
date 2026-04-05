@@ -16,6 +16,14 @@ export const personalInfo = {
 export const projects = [
   {
     id: 1,
+    title: "AD/ADAS ML platform",
+    description: "Built an ML pipeline for road-scene risk classification with dataset validation, training, evaluation, and FastAPI-based inference.",
+    tags: ["Python", "Machine Learning", "pyTorch", "FAST API"],
+    color: "#aacc13",
+    link: "https://github.com/z4idkhan/adas-ml-platform-mini",
+  },
+  {
+    id: 2,
     title: "Headless CMS",
     description: "Built and deployed a Headless CMS using Spring Boot and PostgreSQL, exposing secured REST APIs with a draft–publish workflow. Implemented JWT authentication for secure access, enabling frontend-agnostic JSON integration.",
     tags: ["Java", "SpringBoot", "Spring Security", "Spring6"],
@@ -23,7 +31,7 @@ export const projects = [
     link: "/headlesscmsdashboard",
   },
   {
-    id: 2,
+    id: 3,
     title: "Deep Packet Inspection",
     description: "An e-commerce platform with retro-futuristic design and WebGL product previews.",
     tags: ["Computer Networs", "Wire Shark", "Internet", "Backend"],
@@ -31,7 +39,7 @@ export const projects = [
     link: "https://github.com/z4idkhan/Deep-Packet-Inspection",
   },
   {
-    id: 3,
+    id: 4,
     title: "Content Management System App using my Headless CMS api",
     description: "Created a Content Management System frontend app by using my headless-cms api to demonstrate the work of the api",
     tags: ["React", "Headless-CMS API", "Java", "SpringBoot", "Spring Security"],
@@ -39,7 +47,7 @@ export const projects = [
     link: "https://content-management-system-eight.vercel.app/login",
   },
   {
-    id: 4,
+    id: 5,
     title: "Expense Tracker",
     description: "An AI-powered note-taking app with beautiful markdown editing and mind maps.",
     tags: ["TypeScript", "AI", "Canvas"],
@@ -47,7 +55,7 @@ export const projects = [
     link: "https://expense-tracker-orcin-zeta-40.vercel.app/",
   },
 {
-    id: 5,
+    id: 6,
     title: "Aerospace-telemetry-anomaly-detection",
     description: "Demonstrate how Machine Learning can enhance aerospace mission safety by predicting component failure before it occurs, reducing downtime and preventing catastrophic failures.",
     tags: ["Python", "AI", "Machine Learning","Aerospace"],
