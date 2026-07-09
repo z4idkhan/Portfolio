@@ -25,7 +25,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-6xl md:text-8xl font-bold mb-4 glow-text leading-tight"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 glow-text leading-tight break-words"
         >
           {personalInfo.name}
         </motion.h1>
@@ -34,7 +34,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-xl md:text-2xl text-muted-foreground mb-8"
+          className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8"
         >
           {personalInfo.title}
         </motion.p>
@@ -43,7 +43,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-muted-foreground/70 text-lg"
+          className="text-muted-foreground/70 text-base sm:text-lg"
         >
           {personalInfo.subtitle}
         </motion.p>
