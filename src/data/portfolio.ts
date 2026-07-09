@@ -33,7 +33,7 @@ export const projects = [
   {
     id: 3,
     title: "Deep Packet Inspection",
-    description: "An e-commerce platform with retro-futuristic design and WebGL product previews.",
+    description: "High-performance C++ DPI engine that parses PCAP traffic, extracts TLS SNI/HTTP metadata, classifies applications, performs flow-based filtering, and supports multi-threaded packet processing.",
     tags: ["Computer Networs", "Wire Shark", "Internet", "Backend"],
     color: "#d1c522",
     link: "https://github.com/z4idkhan/Deep-Packet-Inspection",
