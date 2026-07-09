@@ -11,7 +11,7 @@ export default function ProjectsSection() {
       data-section="Projects"
       className="h-screen w-full flex items-center justify-center px-6"
     >
-      <div className="max-w-5xl w-full">
+      <div className="max-w-5xl w-full max-h-[85vh] overflow-y-auto py-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -21,12 +21,12 @@ export default function ProjectsSection() {
           <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
             03. Work
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-8 text-foreground">
             Featured Deployed Projects 
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {projects.map((project, i) => (
             <motion.a
               key={project.id}
@@ -36,17 +36,17 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ scale: 1.03, y: -4 }}
-              className="glass rounded-2xl p-6 glow-border block group cursor-pointer transition-all"
+              className="glass rounded-2xl p-5 sm:p-6 glow-border block group cursor-pointer transition-all"
             >
               {/* Color accent bar */}
               <div
-                className="w-12 h-1 rounded-full mb-4"
+                className="w-12 h-1 rounded-full mb-3 sm:mb-4"
                 style={{ backgroundColor: project.color }}
               />
-              <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+              <p className="text-muted-foreground text-sm mb-3 sm:mb-4 leading-relaxed">
                 {project.description}
               </p>
               <div className="flex gap-2 flex-wrap">

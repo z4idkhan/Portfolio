@@ -25,16 +25,16 @@ export default function SkillsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-3xl w-full"
+        className="max-w-3xl w-full max-h-[85vh] overflow-y-auto py-4"
       >
         <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase text-center">
           04. Skills
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-foreground text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 text-foreground text-center">
           What I Use
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.name}
@@ -54,7 +54,7 @@ export default function SkillsSection() {
               <div
                 className={`relative rounded-xl bg-gradient-to-br ${cardColors[i % cardColors.length]} p-[1px] shadow-lg`}
               >
-                <div className="rounded-xl bg-background/80 backdrop-blur-sm px-5 py-6 flex items-center justify-center min-h-[90px]">
+                <div className="rounded-xl bg-background/80 backdrop-blur-sm px-4 sm:px-5 py-5 sm:py-6 flex items-center justify-center min-h-[70px] sm:min-h-[90px]">
                   <span className="text-sm md:text-base font-semibold text-foreground text-center">
                     {skill.name}
                   </span>

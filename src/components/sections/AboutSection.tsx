@@ -16,18 +16,18 @@ export default function AboutSection() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-2xl glass rounded-2xl p-8 md:p-12 glow-border"
+        className="max-w-2xl w-full glass rounded-2xl p-6 sm:p-8 md:p-12 glow-border max-h-[85vh] overflow-y-auto"
       >
         <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
           02. About Me
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-foreground">
           Who I Am
         </h2>
-        <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+        <p className="text-muted-foreground leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
           {personalInfo.bio}
         </p>
-        <div className="flex gap-4 flex-wrap items-center">
+        <div className="flex gap-3 sm:gap-4 flex-wrap items-center">
           {/* <div className="glass rounded-lg px-4 py-2 text-sm">
             <span className="text-primary font-mono">📍</span>{" "}
             <span className="text-muted-foreground">{personalInfo.location}</span>
