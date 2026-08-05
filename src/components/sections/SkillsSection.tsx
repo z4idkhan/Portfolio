@@ -1,72 +1,72 @@
 /**
- * SkillsSection — 3D floating tech cards.
- * Edit skills in data/portfolio.ts
+ * ProjectsSection — Showcase projects in cards.
+ * Edit project data in data/portfolio.ts
  */
 import { motion } from "framer-motion";
-import { skills } from "@/data/portfolio";
+import { projects } from "@/data/portfolio";
 
-const cardColors = [
-  "from-[hsl(190_95%_55%)] to-[hsl(210_90%_45%)]",
-  "from-[hsl(270_80%_65%)] to-[hsl(290_70%_50%)]",
-  "from-[hsl(190_80%_50%)] to-[hsl(270_60%_55%)]",
-  "from-[hsl(330_70%_60%)] to-[hsl(350_80%_45%)]",
-  "from-[hsl(200_90%_50%)] to-[hsl(220_80%_40%)]",
-  "from-[hsl(260_75%_60%)] to-[hsl(280_85%_50%)]",
-];
-
-export default function SkillsSection() {
+export default function ProjectsSection() {
   return (
     <section
-      data-section="Skills"
-      className="min-h-screen w-full max-w-full overflow-x-hidden flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16"
+      data-section="Projects"
+      className="min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="max-w-3xl w-full min-w-0 py-4"
-      >
-        <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase text-center">
-          04. Skills
-        </p>
+      <div className="max-w-5xl w-full py-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
+            03. Work
+          </p>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 text-foreground text-center">
-          What I Use
-        </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-8 text-foreground">
+            Featured Deployed Projects
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 w-full max-w-full min-w-0">
-          {skills.map((skill, i) => (
-            <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, y: 30, rotateX: 25 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              whileHover={{
-                scale: 1.04,
-                rotateY: 5,
-                rotateX: -3,
-                z: 20,
-              }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              viewport={{ once: true }}
-              className="cursor-pointer min-w-0 w-full"
-              style={{ perspective: 800 }}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          {projects.map((project, i) => (
+            <motion.a
+              key={project.id}
+              href={project.link}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={{ scale: 1.03, y: -4 }}
+              className="glass rounded-2xl p-5 sm:p-6 glow-border block group cursor-pointer transition-all"
             >
+              {/* Color accent bar */}
               <div
-                className={`relative w-full max-w-full min-w-0 rounded-xl bg-gradient-to-br ${
-                  cardColors[i % cardColors.length]
-                } p-[1px] shadow-lg`}
-              >
-                <div className="rounded-xl bg-background/80 backdrop-blur-sm px-3 sm:px-5 py-5 sm:py-6 flex items-center justify-center min-h-[70px] sm:min-h-[90px] overflow-hidden">
-                  <span className="text-sm md:text-base font-semibold text-foreground text-center break-words">
-                    {skill.name}
+                className="w-12 h-1 rounded-full mb-3 sm:mb-4"
+                style={{ backgroundColor: project.color }}
+              />
+
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                {project.title}
+              </h3>
+
+              <p className="text-muted-foreground text-sm mb-3 sm:mb-4 leading-relaxed">
+                {project.description}
+              </p>
+
+              <div className="flex gap-2 flex-wrap">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono text-xs px-2 py-1 rounded bg-secondary text-secondary-foreground"
+                  >
+                    {tag}
                   </span>
-                </div>
+                ))}
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
