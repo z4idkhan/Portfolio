@@ -9,9 +9,9 @@ export default function ProjectsSection() {
   return (
     <section
       data-section="Projects"
-      className="h-screen w-full flex items-center justify-center px-6"
+      className="min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16"
     >
-      <div className="max-w-5xl w-full max-h-[85vh] overflow-y-auto py-4">
+      <div className="max-w-5xl w-full py-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -21,8 +21,9 @@ export default function ProjectsSection() {
           <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
             03. Work
           </p>
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-8 text-foreground">
-            Featured Deployed Projects 
+            Featured Deployed Projects
           </h2>
         </motion.div>
 
@@ -43,12 +44,15 @@ export default function ProjectsSection() {
                 className="w-12 h-1 rounded-full mb-3 sm:mb-4"
                 style={{ backgroundColor: project.color }}
               />
+
               <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
+
               <p className="text-muted-foreground text-sm mb-3 sm:mb-4 leading-relaxed">
                 {project.description}
               </p>
+
               <div className="flex gap-2 flex-wrap">
                 {project.tags.map((tag) => (
                   <span
