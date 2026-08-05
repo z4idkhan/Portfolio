@@ -1,3 +1,9 @@
+/**
+ * Overlay — HTML sections rendered on top of the 3D canvas.
+ * Uses Drei's Scroll.html to position HTML at scroll offsets.
+ * Each section corresponds to a "page" in ScrollControls.
+ */
+import { Scroll } from "@react-three/drei";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import ProjectsSection from "./ProjectsSection";
@@ -7,18 +13,13 @@ import Navigation from "./Navigation";
 
 export default function Overlay() {
   return (
-    <div
-      style={{
-        width: "100%",
-        minHeight: "100%",
-      }}
-    >
+    <Scroll html style={{ width: "100%" }}>
       <Navigation />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
-    </div>
+    </Scroll>
   );
 }
