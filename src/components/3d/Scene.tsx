@@ -52,7 +52,7 @@ export default function Scene() {
 
         <Suspense fallback={null}>
           <ScrollControls
-            pages={6}
+            pages={5}
             damping={0.2}
             distance={1}
             enabled
