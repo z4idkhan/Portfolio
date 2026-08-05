@@ -1,3 +1,4 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
 
 @tailwind base;
@@ -57,19 +58,67 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   body {
     @apply bg-background text-foreground;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
     font-family: 'Space Grotesk', sans-serif;
+
+    /* Allow natural vertical scrolling */
     overflow-x: hidden;
+    overflow-y: auto;
+
+    /* Better mobile scrolling */
+    -webkit-overflow-scrolling: touch;
+
+    /* Prevent accidental horizontal layout expansion */
+    position: relative;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  #root {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    /* Important: do NOT use height: 100% here */
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
 
-  code, .font-mono {
+  code,
+  .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
 }
@@ -81,52 +130,113 @@
 
   .glow-text {
     color: hsl(var(--primary));
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.2);
+    text-shadow:
+      0 0 20px hsl(var(--primary) / 0.5),
+      0 0 40px hsl(var(--primary) / 0.2);
   }
 
   .glow-box {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.15), 0 0 60px hsl(var(--primary) / 0.05);
+    box-shadow:
+      0 0 20px hsl(var(--primary) / 0.15),
+      0 0 60px hsl(var(--primary) / 0.05);
   }
 
   .glow-border {
     border-color: hsl(var(--primary) / 0.3);
-    box-shadow: inset 0 0 20px hsl(var(--primary) / 0.05), 0 0 20px hsl(var(--primary) / 0.1);
+    box-shadow:
+      inset 0 0 20px hsl(var(--primary) / 0.05),
+      0 0 20px hsl(var(--primary) / 0.1);
   }
 }
 
-/* Scrollbar styling (vertical) */
+/* =========================================
+   Scrollbar
+   ========================================= */
+
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--primary) / 0.3);
   border-radius: 2px;
 }
 
-/*
-  Kill any horizontal scrollbar everywhere, including drei's
-  ScrollControls internal scroll container. overflow-x:hidden on
-  body alone doesn't reach it because that container is a separate
-  scrollable div (not the document itself) rendered by drei to
-  drive the 3D scroll effect. This is the thin horizontal bar that
-  was showing at the bottom of the Skills/Projects sections.
-*/
+/* Completely hide horizontal scrollbar */
 ::-webkit-scrollbar:horizontal {
   height: 0 !important;
   display: none;
 }
 
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.3) hsl(var(--background));
+}
+
+/* =========================================
+   Responsive safety
+   ========================================= */
+
+/* Prevent media and large elements from creating horizontal overflow */
+img,
+video,
+canvas,
+svg {
   max-width: 100%;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
+/* Keep long text from expanding the page horizontally */
+* {
+  overflow-wrap: break-word;
 }
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  #root {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+  }
+}
+
+/* =========================================
+   Reduced motion accessibility
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+```
