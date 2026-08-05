@@ -1,8 +1,3 @@
-/**
- * Scene — Main 3D scene that contains all 3D elements.
- * Uses Drei's ScrollControls for scroll-based camera movement.
- * Edit lighting, camera, and 3D elements here.
- */
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ScrollControls, Scroll, Stars } from "@react-three/drei";
@@ -13,11 +8,12 @@ export default function Scene() {
   return (
     <div
       style={{
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         position: "fixed",
         top: 0,
         left: 0,
+        overflow: "hidden",
       }}
     >
       <Canvas
@@ -55,18 +51,18 @@ export default function Scene() {
         />
 
         <Suspense fallback={null}>
-          <ScrollControls pages={5} damping={0.3}>
+          <ScrollControls
+            pages={7}
+            damping={0.2}
+            distance={1}
+            enabled
+          >
             <SceneContent />
-            {/*
-              Overlay renders plain HTML (h2, p, div, span, etc).
-              It CANNOT be a direct child of ScrollControls/Canvas —
-              R3F will try to interpret it as THREE objects and crash
-              ("R3F: P is not part of the THREE namespace").
-              <Scroll html> tells drei to render this subtree in a
-              real DOM layer that scrolls in sync with the 3D camera.
-            */}
-            <Scroll html style={{ width: "100%" }}>
-              <Overlay />
+
+            <Scroll html>
+              <div style={{ width: "100vw" }}>
+                <Overlay />
+              </div>
             </Scroll>
           </ScrollControls>
         </Suspense>
