@@ -94,7 +94,7 @@
   }
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling (vertical) */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -106,13 +106,27 @@
   border-radius: 2px;
 }
 
-/* Canvas container */
-#root {
-  width: 100%;
-  height: 100%;
+/*
+  Kill any horizontal scrollbar everywhere, including drei's
+  ScrollControls internal scroll container. overflow-x:hidden on
+  body alone doesn't reach it because that container is a separate
+  scrollable div (not the document itself) rendered by drei to
+  drive the 3D scroll effect. This is the thin horizontal bar that
+  was showing at the bottom of the Skills/Projects sections.
+*/
+::-webkit-scrollbar:horizontal {
+  height: 0 !important;
+  display: none;
 }
 
 html, body, #root {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
