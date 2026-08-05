@@ -57,6 +57,14 @@ export default function Scene() {
         <Suspense fallback={null}>
           <ScrollControls pages={5} damping={0.3}>
             <SceneContent />
+            {/*
+              Overlay already wraps its own content in <Scroll html>
+              internally (see sections/Overlay.tsx) — do NOT wrap it
+              in another <Scroll html> here. Nesting two Scroll html
+              portals breaks drei's DOM/THREE reconciliation and is
+              what caused the "R3F: P/H2/Div is not part of the THREE
+              namespace" crashes and eventual WebGL context loss.
+            */}
             <Overlay />
           </ScrollControls>
         </Suspense>
