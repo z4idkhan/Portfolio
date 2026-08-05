@@ -11,7 +11,7 @@ export default function HeroSection() {
       data-section="Home"
       className="h-screen w-full flex items-center justify-center px-6"
     >
-      <div className="max-w-3xl text-center -translate-y-8 sm:-translate-y-10 md:-translate-y-12">
+      <div className="max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
