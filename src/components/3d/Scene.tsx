@@ -5,7 +5,7 @@
  */
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ScrollControls, Stars } from "@react-three/drei";
+import { ScrollControls, Scroll, Stars } from "@react-three/drei";
 import SceneContent from "./SceneContent";
 import Overlay from "../sections/Overlay";
 
@@ -58,14 +58,16 @@ export default function Scene() {
           <ScrollControls pages={5} damping={0.3}>
             <SceneContent />
             {/*
-              Overlay already wraps its own content in <Scroll html>
-              internally (see sections/Overlay.tsx) — do NOT wrap it
-              in another <Scroll html> here. Nesting two Scroll html
-              portals breaks drei's DOM/THREE reconciliation and is
-              what caused the "R3F: P/H2/Div is not part of the THREE
-              namespace" crashes and eventual WebGL context loss.
+              Overlay renders plain HTML (h2, p, div, span, etc).
+              It CANNOT be a direct child of ScrollControls/Canvas —
+              R3F will try to interpret it as THREE objects and crash
+              ("R3F: P is not part of the THREE namespace").
+              <Scroll html> tells drei to render this subtree in a
+              real DOM layer that scrolls in sync with the 3D camera.
             */}
-            <Overlay />
+            <Scroll html style={{ width: "100%" }}>
+              <Overlay />
+            </Scroll>
           </ScrollControls>
         </Suspense>
       </Canvas>
