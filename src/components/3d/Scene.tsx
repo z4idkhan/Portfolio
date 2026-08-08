@@ -60,10 +60,10 @@ export default function Scene() {
             <SceneContent />
 
             <Scroll html>
-              <div style={{ width: "100vw" }}>
-                <Overlay />
-              </div>
-            </Scroll>
+  <div className="w-screen pb-48 md:pb-0">
+    <Overlay />
+  </div>
+</Scroll>
           </ScrollControls>
         </Suspense>
       </Canvas>
