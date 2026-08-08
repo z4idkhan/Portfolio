@@ -22,7 +22,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 pointer-events-none">
       <div className="flex items-center justify-between">
         <div className="pointer-events-auto">
-          <span className="font-mono text-sm font-semibold glow-text tracking-wider">
+          <span className="font-mono text-sm font-semibold portfolio-glow tracking-wider">
             PORTFOLIO
           </span>
         </div>

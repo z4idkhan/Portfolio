@@ -16,7 +16,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="font-mono text-sm text-primary mb-4 tracking-widest uppercase"
+          className="font-mono text-sm text-[#f9cbd2] mb-4 tracking-widest uppercase"
         >
           Hello, I'm
         </motion.p>
@@ -25,7 +25,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 glow-text leading-tight break-words"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 glow-text text-[#f9cbd2] leading-tight break-words"
         >
           {personalInfo.name}
         </motion.h1>
