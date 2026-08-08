@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       data-section="Home"
-      className="min-h-[1000px] md:min-h-screen flex items-center justify-center"
+      className="h-screen w-full flex items-center justify-center px-6"
     >
       <div className="max-w-3xl text-center">
         <motion.p
