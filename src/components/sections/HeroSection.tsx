@@ -7,9 +7,11 @@ import { personalInfo } from "@/data/portfolio";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[850px] md:min-h-screen flex items-center justify-center">
-      <div className="text-center">
-
+    <section
+      data-section="Home"
+      className="min-h-[750px] md:min-h-screen flex items-center justify-center"
+    >
+      <div className="max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,19 +55,11 @@ export default function HeroSection() {
           className="mt-12 flex justify-center"
         >
           <div className="animate-bounce text-primary/50">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
