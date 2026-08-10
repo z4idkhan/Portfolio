@@ -11,14 +11,13 @@ export default function AboutSection() {
       data-section="About"
       className="h-screen w-full flex items-center justify-center px-6"
     >
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="max-w-2xl w-full glass rounded-2xl p-6 sm:p-8 md:p-12 glow-border max-h-[85vh] overflow-y-auto"
-      >
-        <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true, amount: 0.3 }}
+  className="max-w-2xl w-full glass rounded-2xl p-6 sm:p-8 md:p-12 glow-border max-h-[85vh] overflow-y-auto"
+>        <p className="font-mono text-xs text-primary mb-2 tracking-widest uppercase">
           02. About Me
         </p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-foreground">
